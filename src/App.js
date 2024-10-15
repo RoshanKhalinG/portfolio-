@@ -1,13 +1,19 @@
-import Navbar from "./components/Navbar"; // Ensure Navbar.js exists
-import HeroSection from "./components/HeroSection"; // Ensure HeroSection.js exists
-import About from "./components/About"; // Ensure About.js exists
-import Skills from "./components/Skills"; // Ensure Skills.js exists
-import Experience from "./components/Experience"; // Ensure Experience.js exists
-import Education from "./components/Education"; // Ensure Education.js exists
-import ProjectDetails from "./components/ProjectDetails"; // Ensure ProjectDetails.js exists
-import Projects from "./components/Projects"; // Ensure Projects.js exists
-import Contact from "./components/Contact"; // Ensure Contact.js exists
-import Footer from "./components/Footer"; // Ensure Footer.js exists
+import { ThemeProvider } from "styled-components";
+import { useState, useEffect } from "react";
+import { darkTheme, lightTheme } from './utils/Themes.js'
+import Navbar from "./components/Navbar";
+import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import HeroSection from "./components/HeroSection";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import ProjectDetails from "./components/ProjectDetails";
+import styled from "styled-components";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
